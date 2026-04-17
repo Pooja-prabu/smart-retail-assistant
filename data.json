@@ -1,0 +1,65 @@
+[
+  {
+    "id": "1",
+    "name": "Nike Air Max",
+    "category": "shoes",
+    "price": 4500,
+    "rating": 4.8,
+    "in_stock": true,
+    "description": "Premium athletic shoes built for comfort."
+  },
+  {
+    "id": "2",
+    "name": "Adidas Running Shoes",
+    "category": "shoes",
+    "price": 1800,
+    "rating": 4.2,
+    "in_stock": true,
+    "description": "Affordable and durable running shoes."
+  },
+  {
+    "id": "3",
+    "name": "Puma Gym Trainers",
+    "category": "shoes",
+    "price": 1950,
+    "rating": 4.5,
+    "in_stock": true,
+    "description": "Best shoes for gym and training."
+  },
+  {
+    "id": "4",
+    "name": "Sony Wireless Headphones",
+    "category": "electronics",
+    "price": 3200,
+    "rating": 4.6,
+    "in_stock": true,
+    "description": "Noise cancelling over-ear headphones."
+  },
+  {
+    "id": "5",
+    "name": "JBL Bluetooth Speaker",
+    "category": "electronics",
+    "price": 1500,
+    "rating": 4.3,
+    "in_stock": true,
+    "description": "Portable bluetooth speaker with deep bass."
+  },
+  {
+    "id": "6",
+    "name": "Cotton T-Shirt (Pack of 3)",
+    "category": "clothing",
+    "price": 1200,
+    "rating": 4.4,
+    "in_stock": true,
+    "description": "Comfortable cotton t-shirts for everyday wear."
+  },
+  {
+    "id": "7",
+    "name": "Denim Jacket",
+    "category": "clothing",
+    "price": 2500,
+    "rating": 4.7,
+    "in_stock": false,
+    "description": "Classic blue denim jacket."
+  }
+]
