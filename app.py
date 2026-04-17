@@ -25,13 +25,13 @@ def chat_endpoint(req: ChatRequest):
     user_query = req.message
     
     # 1. Rule-based filtering logic
-    recommended_items, category = filter_products(user_query)
+    recommended_items, intent = filter_products(user_query)
     
     # 2. LLM dynamic explainable response
-    explanation = generate_explanation(user_query, recommended_items)
+    explanation = generate_explanation(user_query, recommended_items, intent)
     
     # 3. Log interaction to Firebase (or Mock)
-    log_interaction(user_query, len(recommended_items), category)
+    log_interaction(user_query, len(recommended_items), intent.get("category"))
     
     return {
         "explanation": explanation,

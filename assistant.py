@@ -19,11 +19,22 @@ def extract_intent(query: str):
     query_lower = query.lower()
     
     # Extract category
-    categories = ["shoes", "clothing", "electronics"]
+    category_map = {
+        "shoes": ["shoe", "sneaker", "trainer", "boot"],
+        "clothing": ["cloth", "shirt", "t-shirt", "jacket", "jeans", "pant", "apparel"],
+        "electronics": ["electronic", "headphone", "speaker", "earbud", "audio", "tech"]
+    }
+    
     detected_category = None
-    for cat in categories:
-        if cat in query_lower:
-            detected_category = cat
+    for category, keywords in category_map.items():
+        if category in query_lower:
+            detected_category = category
+            break
+        for keyword in keywords:
+            if keyword in query_lower:
+                detected_category = category
+                break
+        if detected_category:
             break
             
     # Extract price constraint
@@ -64,4 +75,4 @@ def filter_products(query: str):
     filtered.sort(key=lambda x: x.get("rating", 0), reverse=True)
     
     # Return top 3 recommendations
-    return filtered[:3], intent["category"]
+    return filtered[:3], intent
