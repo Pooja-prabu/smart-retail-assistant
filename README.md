@@ -18,6 +18,7 @@ A lightweight AI-powered chat assistant for retail recommendations built with **
 - `data.json`: Static, lightweight database.
 - `static/index.html`: The user interface.
 
+
 ## Getting Started
 
 ### 1. Requirements Setup
@@ -42,3 +43,46 @@ export GEMINI_API_KEY="your_api_key"
 uvicorn app:app --host 0.0.0.0 --port 8000
 ```
 Open `http://localhost:8000/` in your browser.
+
+## 🧪 Test Cases & Validations
+
+The system has been tested to ensure:
+
+- ✅ Chat UI is functional  
+- ✅ Explainable AI responses are generated  
+- ✅ Correct filtering based on price and category  
+
+---
+
+### 🔹 Test 1
+
+**Input:**
+headphones under 3000
+
+
+**Expected Output:**
+👉 ONLY headphone-related products are recommended  
+
+---
+
+### 🔹 Test 2
+
+**Input:**
+
+shoes under 2000
+
+
+**Expected Output:**
+👉 ONLY shoe-related products are recommended  
+
+---
+
+### 🔹 Test 3
+
+**Input:**
+
+best products
+
+
+**Expected Output:**
+👉 Mixed category recommendations are returned  
