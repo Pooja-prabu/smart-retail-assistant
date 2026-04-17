@@ -42,6 +42,11 @@ def chat_endpoint(req: ChatRequest):
 def insights_endpoint():
     return get_insights()
 
+@app.get("/products")
+def products_endpoint():
+    from assistant import load_data
+    return load_data()
+
 # Make sure 'static' directory exists before mounting
 os.makedirs("static", exist_ok=True)
 app.mount("/", StaticFiles(directory="static", html=True), name="static")
